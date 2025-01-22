@@ -1,3 +1,12 @@
+/* 
+GROUP PROJECT: AR-RAHMAN ZAKAT
+Name: NUR ALIYA YASMIN BINTI MOHAMAD HAFIZ, NUR AQILA BINTI AZHAR & NURSYAHIRAH BINTI LUDIN
+Matric No: 2023103013, 2023367775 , 2023371795
+Group: RCDCS 251 4A
+Public URL: https://github.com/yayan4ever/Ar-Rahman-Zakat
+            https://yayan4ever.github.io/Ar-Rahman-Zakat/
+*/
+
 // Function to calculate Business Zakat
 function calculateBusinessZakat() {
     const income = parseFloat(document.getElementById('business-income').value);
@@ -82,7 +91,19 @@ function toggleTheme() {
     }
 }
 
-// Function to toggle between normal, deuteranopia, and tritanopia themes
+function showAlert(event) {
+    event.preventDefault(); // Prevent the default form submission
+    // Display a success message
+    alert("Success! Your message has been submitted.");
+    // Optionally, you can submit the form programmatically if needed
+    // document.getElementById("contactForm").submit();
+}
+
+// Attach the showAlert function to the form's submit event
+document.getElementById("contactForm").addEventListener("submit", showAlert);
+
+
+// Function to toggle between themes (Normal, Deuteranopia, Protanopia, Tritanopia, Achromatopsia)
 function toggleTheme() {
     let body = document.body;
 
@@ -90,16 +111,28 @@ function toggleTheme() {
         body.classList.remove('normal-theme');
         body.classList.add('deuteranopia-theme');
         localStorage.setItem('theme', 'deuteranopia');
-        document.getElementById('colorBlindToggle').innerText = "Enable Tritanopia Mode";
+        document.getElementById('colorBlindToggle').innerText = "Enable Protanopia Mode";
     } 
     else if (body.classList.contains('deuteranopia-theme')) {
         body.classList.remove('deuteranopia-theme');
+        body.classList.add('protanopia-theme');
+        localStorage.setItem('theme', 'protanopia');
+        document.getElementById('colorBlindToggle').innerText = "Enable Tritanopia Mode";
+    } 
+    else if (body.classList.contains('protanopia-theme')) {
+        body.classList.remove('protanopia-theme');
         body.classList.add('tritanopia-theme');
         localStorage.setItem('theme', 'tritanopia');
+        document.getElementById('colorBlindToggle').innerText = "Enable Achromatopsia Mode";
+    } 
+    else if (body.classList.contains('tritanopia-theme')) {
+        body.classList.remove('tritanopia-theme');
+        body.classList.add('achromatopsia-theme');
+        localStorage.setItem('theme', 'achromatopsia');
         document.getElementById('colorBlindToggle').innerText = "Disable Color-Blind Mode";
     } 
     else {
-        body.classList.remove('tritanopia-theme');
+        body.classList.remove('achromatopsia-theme');
         body.classList.add('normal-theme');
         localStorage.setItem('theme', 'normal');
         document.getElementById('colorBlindToggle').innerText = "Enable Deuteranopia Mode";
@@ -111,10 +144,18 @@ function loadThemePreference() {
     let savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'deuteranopia') {
         document.body.classList.add('deuteranopia-theme');
+        document.getElementById('colorBlindToggle').innerText = "Enable Protanopia Mode";
+    } 
+    else if (savedTheme === 'protanopia') {
+        document.body.classList.add('protanopia-theme');
         document.getElementById('colorBlindToggle').innerText = "Enable Tritanopia Mode";
     } 
     else if (savedTheme === 'tritanopia') {
         document.body.classList.add('tritanopia-theme');
+        document.getElementById('colorBlindToggle').innerText = "Enable Achromatopsia Mode";
+    } 
+    else if (savedTheme === 'achromatopsia') {
+        document.body.classList.add('achromatopsia-theme');
         document.getElementById('colorBlindToggle').innerText = "Disable Color-Blind Mode";
     } 
     else {
@@ -125,3 +166,6 @@ function loadThemePreference() {
 
 // Run the theme preference loader on page load
 document.addEventListener('DOMContentLoaded', loadThemePreference);
+
+// Attach the toggleTheme function to the button
+document.getElementById('colorBlindToggle').addEventListener('click', toggleTheme);
