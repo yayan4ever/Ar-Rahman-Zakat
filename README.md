@@ -41,30 +41,24 @@ Here’s what you can explore on our website:
 
 ---
 
-## 🌈 Screenshots  
-Here’s a sneak peek of what Ar-Rahman Zakat looks like!  
-> *(Add screenshots of the home page, calculator, and contact form here)*  
-
----
-
 ## 🚀 How to Use  
 1. Clone the repository:  
    ```bash
-   git clone https://github.com/yourusername/ar-rahman-zakat.git
+   git clone https://github.com/yayan4ever/Ar-Rahman-Zakat
 2. Navigate to the project folder and open **index.html** in your browser.
 3. Explore the features and calculate your Zakat with ease.
 
 #🛠️ Technologies Used
-- HTML5 🏗️
-- CSS3 🎨
+- HTML 🏗️
+- CSS 🎨
 - JavaScript ⚙️
 
 # 🤝 Meet Our Team
 | 🧑‍💼 **Name**       | 📋 **Role**          | 💬 **Quote**                  |
 |--------------------|----------------------|-------------------------------|
-| Aqila             | Project Manager     | "Teamwork makes the dream work!" |
-| Aiman             | Developer           | "Code, debug, repeat."        |
-| Farah             | Designer            | "Creativity takes courage."   |
+| Aliya             |  Manager     | "Leading with compassion" |
+| Aqila             | Consultant   | "Ensuring accurate guidance." |
+| Syahirah          | Clerk        | "Committed to serving."   |
 
 # 📩 Contact Us
 We’d love to hear from you!
