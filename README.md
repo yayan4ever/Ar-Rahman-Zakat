@@ -62,8 +62,8 @@ Here’s what you can explore on our website:
 
 # 📩 Contact Us
 We’d love to hear from you!
-📧 Email: info@arrahmanzakat.com
-📍 Location: Perlis, Malaysia
+- 📧 Email: info@arrahmanzakat.com
+- 📍 Location: Perlis, Malaysia
 
 Or fill out our Contact Form.
 
