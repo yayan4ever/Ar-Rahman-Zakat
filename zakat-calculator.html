@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zakat Calculator - Ar-Rahman Zakat</title>
+    <link rel="stylesheet" href="zakat.css">
+    <link rel="icon" href="icon1.png">
+</head>
+<body class="light-theme">
+    <header>
+        <h1>Zakat Calculator</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="zakat-calculator.html">Zakat Calculator</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+                <li><button id="colorBlindToggle" onclick="toggleTheme()">Enable Color-Blind Mode</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="calculators">
+            <h2>Zakat Calculators</h2>
+    
+            <!-- Zakat Perniagaan (Business Zakat) -->
+            <div class="calculator" id="business-zakat">
+                <h3>Zakat Perniagaan (Business Zakat)</h3>
+                <label for="business-income">Enter Business Income: </label>
+                <input type="number" id="business-income" placeholder="Enter amount" min="0" aria-label="Enter business income">
+                <button onclick="calculateBusinessZakat()">Calculate Zakat</button>
+                <p id="business-zakat-result"></p>
+            </div>
+    
+            <!-- Zakat Pendapatan (Income Zakat) -->
+            <div class="calculator" id="income-zakat">
+                <h3>Zakat Pendapatan (Income Zakat)</h3>
+                <label for="income">Enter Income: </label>
+                <input type="number" id="income" placeholder="Enter amount" min="0" aria-label="Enter your income">
+                <button onclick="calculateIncomeZakat()">Calculate Zakat</button>
+                <p id="income-zakat-result"></p>
+            </div>
+    
+            <!-- Zakat Emas (Gold Zakat) -->
+            <div class="calculator" id="gold-zakat">
+                <h3>Zakat Emas (Gold Zakat)</h3>
+                <label for="gold-weight">Enter Gold Weight (in grams): </label>
+                <input type="number" id="gold-weight" placeholder="Enter amount" min="0" aria-label="Enter gold weight in grams">
+                <button onclick="calculateGoldZakat()">Calculate Zakat</button>
+                <p id="gold-zakat-result"></p>
+            </div>
+    
+            <!-- Zakat Wang Simpanan (Savings Zakat) -->
+            <div class="calculator" id="savings-zakat">
+                <h3>Zakat Wang Simpanan (Savings Zakat)</h3>
+                <label for="savings">Enter Savings Amount: </label>
+                <input type="number" id="savings" placeholder="Enter amount" min="0" aria-label="Enter savings amount">
+                <button onclick="calculateSavingsZakat()">Calculate Zakat</button>
+                <p id="savings-zakat-result"></p>
+            </div>
+    
+            <!-- Summary Table -->
+            <div id="zakat-summary">
+                <h3>Zakat Summary</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Type</th>
+                            <th>Amount</th>
+                            <th>Zakat Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody id="zakat-summary-table">
+                        <!-- Data will be filled dynamically -->
+                    </tbody>
+                </table>
+            </div>
+    
+        </section>
+    
+    </main>
+
+    <footer>
+        <p>© 2025 Ar-Rahman Zakat</p>
+    </footer>
+    <script src="zakat.js"></script>
+</body>
+</html>
