@@ -1,3 +1,12 @@
+/*
+GROUP PROJECT: AR-RAHMAN ZAKAT
+Name: NUR ALIYA YASMIN BINTI MOHAMAD HAFIZ, NUR AQILA BINTI AZHAR & NURSYAHIRAH BINTI LUDIN
+Matric No: 2023103013, 2023367775 , 2023371795
+Group: RCDCS 251 4A
+Public URL: https://github.com/yayan4ever/Ar-Rahman-Zakat
+            https://yayan4ever.github.io/Ar-Rahman-Zakat/
+*/
+
 /* General Styling */
 body {
     font-family: Arial, sans-serif;
@@ -19,12 +28,53 @@ body.deuteranopia-theme {
     color: #2a2a2a;
 }
 
+body.deuteranopia-theme h1,
+body.deuteranopia-theme h2,
+body.deuteranopia-theme p,
+body.deuteranopia-theme button {
+    color: darkolivegreen; /* Darker text for better contrast */
+}
+
+/* Protanopia (Red-Green Color Blindness) Theme */
+body.protanopia-theme {
+    background-color: #f0f0f0; /* Similar to deuteranopia */
+    color: #2a2a2a;
+}
+
+body.protanopia-theme h1,
+body.protanopia-theme h2,
+body.protanopia-theme p,
+body.protanopia-theme button {
+    color: darkkhaki; /* Darker text for better contrast */
+}
+
+
 /* Tritanopia (Blue-Yellow Color Blindness) Theme */
 body.tritanopia-theme {
     background-color: #f5f5dc;  /* Light beige background */
     color: #333;
 }
 
+body.tritanopia-theme h1,
+body.tritanopia-theme h2,
+body.tritanopia-theme p,
+body.tritanopia-theme button {
+    color: #262c4d; /* Maintain text color */
+}
+
+/* Achromatopsia (Complete Color Blindness) Theme */
+body.achromatopsia-theme {
+    background-color: #d3d3d3; /* Light gray background */
+    color: #000; /* Black text */
+}
+
+body.achromatopsia-theme h1,
+body.achromatopsia-theme h2,
+body.achromatopsia-theme p,
+body.achromatopsia-theme button {
+    color: #000; /* Black text for contrast */
+}
+
 /* Header Styling */
 header {
     background-color: #005a87;
@@ -34,38 +84,64 @@ header {
     justify-content: space-between;
     align-items: center;
 }
-body.tritanopia-theme header {
+
+body.deuteranopia-theme header,
+body.protanopia-theme header {
     background-color: #2b8a3e;  /* Greenish tone replacing blue */
     color: white;
 }
 
-body.tritanopia-theme nav ul li a {
-    color: white;
+body.tritanopia-theme header {
     background-color: #ff9933;  /* Orange replacing yellow */
 }
 
-body.tritanopia-theme nav ul li a:hover {
-    background-color: #e67e22;
+body.achromatopsia-theme header {
+    background-color: #7f7f7f; /* Gray header */
 }
 
-body.tritanopia-theme button {
-    background: #ff9933;
+/* Button Styling */
+button {
+    border: none;
+    background: #ffb300;
     color: #2a2a2a;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-body.tritanopia-theme button:hover {
-    background-color: #e67e22;
+button:hover {
+    background-color: #ffa000;
 }
 
-/* Header Styling */
-header {
-    background-color: #005a87;
-    color: white;
-    padding: 15px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* Color-Blind Mode Toggle */
+#colorBlindToggle {
+    background: #ffb300;
+    color: #2a2a2a;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 20px 0;
+    display: block;
 }
+
+#colorBlindToggle:hover {
+    background: #ffa000;
+}
+
+/* Dark Theme Adjustments */
+body.dark-theme {
+    background-color: #2a2a2a;
+    color: #ffffff;
+}
+
+body.dark-theme header {
+    background-color: #1e1e1e;
+    color: #ffb300;
+}
+
 
 header h1 {
     margin: 0;
@@ -150,6 +226,20 @@ section {
     height: 300px;
     object-fit: cover;
     border-radius: 10px 10px 0 0;
+}
+
+/* Change image colors for color blindness themes */
+body.deuteranopia-theme .card img,
+body.protanopia-theme .card img {
+    filter: grayscale(100%); /* Simulate color blindness effect */
+}
+
+body.tritanopia-theme .card img {
+    filter: sepia(100%); /* Adjust colors for Tritanopia */
+}
+
+body.achromatopsia-theme .card img {
+    filter: grayscale(100%); /* Simulate color blindness effect */
 }
 
 .card:hover {
@@ -273,6 +363,7 @@ footer {
 .contact-form button:hover {
     background-color: #e5941f;
 }
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
